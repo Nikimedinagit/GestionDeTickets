@@ -183,7 +183,8 @@ export function TicketTable({
                   <td className="px-4 py-1 align-middle">
                     <button
                       onClick={() => onDetalleTicket(ticket)}
-                      className="font-semibold text-[#1e293b] uppercase hover:underline text-left leading-tight block truncate"
+                      title={ticket.titulo}
+                      className="font-semibold text-[#1e293b] uppercase hover:underline text-left leading-tight block w-full truncate overflow-hidden whitespace-nowrap"
                     >
                       {ticket.titulo}
                     </button>

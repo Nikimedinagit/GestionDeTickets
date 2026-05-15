@@ -28,7 +28,7 @@ builder.Services.AddAuthentication(options => {
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(options => {
-    options.RequireHttpsMetadata = false; // Solo para desarrollo
+    options.RequireHttpsMetadata = true; // Solo para desarrollo
     options.SaveToken = true;
     options.TokenValidationParameters = new TokenValidationParameters {
         ValidateIssuerSigningKey = true,
@@ -44,7 +44,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
+        policy.WithOrigins("http://gestiontickets.runasp.net")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });

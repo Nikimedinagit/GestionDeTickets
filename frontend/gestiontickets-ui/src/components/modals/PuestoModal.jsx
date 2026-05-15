@@ -97,7 +97,7 @@ export function PuestosFormModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[400px] bg-white rounded-md border-none p-0 overflow-hidden shadow-2xl [&>button]:hidden">
+      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-[400px] bg-white rounded-md border-none p-0 overflow-hidden shadow-2xl [&>button]:hidden">
         <DialogHeader className="p-3">
           <DialogTitle className="text-[#1e293b] flex items-center gap-2 text-xl font-extrabold tracking-tight">
             <div className="bg-[#1e293b]/10 p-2 rounded-lg">
@@ -132,7 +132,6 @@ export function PuestosFormModal({
                   ? "border-red-400 focus-visible:ring-red-100 focus-visible:border-red-500"
                   : "border-zinc-200 focus-visible:ring-zinc-200 focus-visible:border-zinc-400"
               }`}
-              autoFocus
             />
 
             {error.descripcion && (
