@@ -1,0 +1,6 @@
+@GestionTickets.API_HostAddress = http://localhost:5038
+
+GET {{GestionTickets.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
